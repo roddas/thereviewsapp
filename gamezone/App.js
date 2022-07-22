@@ -1,7 +1,7 @@
 import Home from "./screens/home";
 import * as Font from 'expo-font';
 import { useState } from "react";
-import {AppLoading} from 'expo';
+import  AppLoading  from 'expo-app-loading';
 
 const getFonts = () => Font.loadAsync({
     'nunito-regular': require('./assets/font/Nunito-Regular.ttf'),
@@ -20,7 +20,7 @@ export default function App() {
   }else
   {
    return(
-     <AppLoading startAsync={getFonts} onFinish={() => { setFontsLoaded(true) }} />
+     <AppLoading onError={() => { console.error('Erro') }} startAsync={getFonts} onFinish={() => { setFontsLoaded(true) }} />
    );
   }
 }
