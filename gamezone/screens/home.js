@@ -3,13 +3,13 @@ import {StyleSheet, View,Text} from 'react-native';
 export default function Home()
 {
     return(
-        <View style={style.container}>
+        <View style={styles.container}>
             <Text>Home Screen</Text>
         </View>
     )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
 
     container : {
         padding : 24
